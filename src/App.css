@@ -1,0 +1,104 @@
+.App {
+  display: grid;
+  grid-template:
+    "nav-bar main side-bar" auto
+    "nav-bar main side-bar" auto
+    "nav-bar main side-bar" auto/
+    370px auto 400px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-bar {
+  grid-area: nav-bar;
+  position: fixed;
+  text-align: left;
+  margin-left: 80px;
+  border-right:thin solid gainsboro ;
+  padding-right: 30px;
+}
+.nav-bar ul{
+  list-style: none;
+  margin-top: 30px;
+  font-weight:470;
+  display: grid;
+  grid-auto-flow: row;
+  gap:5px
+}
+.logo-image-btn {
+  padding-left: 20px;
+  margin-top: 17px;
+  border: none;
+  background-color: transparent;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-bar-lists img {
+  margin-right: 15px;
+}
+.nav-bar-lists {
+  padding-left: 10px;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.nav-bar-list{
+  display: inline;
+  padding-left: 40px;
+
+}
+.nav-bar-list-btn {
+  border: none;
+  background-color: transparent;
+  padding-left: 10px;
+  grid-auto-flow: column;
+  width: auto;
+  height: 50px;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-bar-list-btn:hover {
+  background-color: rgba(220, 220, 220, 0.728);
+  border-radius: 25px;
+}
+.tweet-btn {
+  width:220px;
+  height: 50px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #1d9bf0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.tweet-btn:hover {
+  background-color:#177bbdec;
+}
+.side-bar{
+  grid-area: side-bar;
+  background-color: pink;
+  padding-right: 20px;
+}
+main {
+  grid-area: main;
+  display: grid;
+  grid-template:
+    "header" 50px
+    "main-part" auto/
+    auto;
+}
+.header{
+  grid-area: header;
+  display: grid;
+  grid-auto-flow: column;
+}
+.header img {
+  align-self: flex-start;
+  margin: 0 auto;
+  float:left;
+  background-color: #1d9bf0;
+}
+.main-part {
+  grid-area: main-part;
+  background-color: yellow;
+}
