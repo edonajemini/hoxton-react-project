@@ -1,6 +1,11 @@
 import { useState } from 'react'
+import One from '../public/images/One.png';
+import Second from '../public/images/Second.png';
+import Third from '../public/images/Third.png';
+import Fourth from '../public/images/Fourth.png';
+import Fifth from '../public/images/Fifth.png';
+import Sixth from '../public/images/Sixth.png';
 import './App.css'
-
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,8 +24,13 @@ function App() {
           <li> <button className='nav-bar-list-btn'> <img src='https://cdn-icons-png.flaticon.com/512/570/570223.png' alt='logo-More' width="24px"/>More</button> </li>
           </ul>
           <button className='tweet-btn'>Tweet</button>
-          <h3>Loged In Person</h3>
-          <p>@Loged In Person</p>
+          <button className='loged-in-btn'>
+          <img src='https://avatars.githubusercontent.com/u/74864689?v=4' alt='logo-stars' width="40px"/>
+          <div className='loged-in'>
+          <h4>Edona Jemini</h4>
+          <p>@EdonaJemini</p>
+          </div>
+          </button>
         </div>
       <div className='side-bar'>
       <input type="search" placeholder="🔎" ></input>
@@ -81,12 +91,30 @@ function App() {
       <main>
         <div className='header'>
       <h3>Home</h3> 
-      <img src='https://cdn-icons-png.flaticon.com/512/2913/2913136.png' alt='logo-stars' width="25px"/>
+      <img src='https://cdn-icons-png.flaticon.com/512/685/685173.png' alt='logo-stars' width="20px"/>
         </div>
         <div className='main-part'>
+          <div className='box-picture'>
+          <img src='https://avatars.githubusercontent.com/u/74864689?v=4' alt='logo-stars' width="50px"/>
+          <button className='everyone-btn'>
+          <a href='#' >Everyone ▼ </a>
+          </button>
+          </div>
       <form>
-        <input type="text" placeholder='Whats happening?'></input>
-        <button type="submit" >Tweet</button>
+        <div className='input-tweet'>
+        <input type="text" placeholder="What's happening?"></input>
+        </div>
+        <div className='tweet-btn-line'>
+          <div className='tweet-btn-line-list'>
+        <button> <img src={One} alt="" width="30px"/></button>
+        <button> <img src={Second} alt="" width="30px"/></button>
+        <button> <img src={Third} alt="" width="30px"/></button>
+        <button> <img src={Fourth} alt="" width="30px"/></button>
+        <button> <img src={Fifth} alt="" width="30px"/></button>
+        <button> <img src={Sixth} alt="" width="30px"/></button>
+        </div>
+        <button className='submit-tweet-btn' type="submit" >Tweet</button>
+        </div>
       </form>
       </div>
       </main>

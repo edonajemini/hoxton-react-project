@@ -4,7 +4,7 @@
     "nav-bar main side-bar" auto
     "nav-bar main side-bar" auto
     "nav-bar main side-bar" auto/
-    370px auto 400px;
+    370px 600px auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -13,8 +13,10 @@
   position: fixed;
   text-align: left;
   margin-left: 80px;
-  border-right:thin solid gainsboro ;
+  border-right:thin solid rgba(220, 220, 220, 0.439) ;
   padding-right: 30px;
+  height: 1000px;
+  width: 250px ;
 }
 .nav-bar ul{
   list-style: none;
@@ -59,6 +61,37 @@
   background-color: rgba(220, 220, 220, 0.728);
   border-radius: 25px;
 }
+
+.loged-in-btn {
+  margin-top: 50px;
+  width:220px;
+  height: 70px;
+  margin-left: 15px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 14px;
+  align-content: center;
+  text-align: center;
+}
+.loged-in-btn p{
+  color: gray;
+}
+.loged-in-btn:hover {
+  background-color: rgba(220, 220, 220, 0.536);
+}
+.loged-in-btn img{
+  margin-top: 20px;
+  float: inline-start;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.loged-in{
+  display:table-row;
+  margin-bottom: 5px;
+}
+
 .tweet-btn {
   width:220px;
   height: 50px;
@@ -91,14 +124,90 @@ main {
   grid-area: header;
   display: grid;
   grid-auto-flow: column;
+  position: fixed;
+  width: auto;
+  gap:500px;
 }
 .header img {
-  align-self: flex-start;
   margin: 0 auto;
-  float:left;
-  background-color: #1d9bf0;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
 }
 .main-part {
   grid-area: main-part;
-  background-color: yellow;
+}
+
+.box-picture {
+  display: grid;
+  grid-template-columns:  60px 60px;;
+  align-items: flex-start;
+}
+.box-picture img{
+  margin-top: 15px;
+  border-radius: 30px;
+}
+.input-tweet {
+  margin-left: 60px;
+}
+input{
+  width: 400px;
+  height: 40px;
+  border: none;
+  font-size: 22px;
+}
+input::placeholder {
+  color: rgb(91, 89, 89);
+}
+input:focus{
+  outline: none;
+}
+
+.everyone-btn {
+  margin-top: 15px;
+  border: thin solid gainsboro;
+  background-color: transparent;
+  border-radius: 25px;
+  height: auto;
+  font-size: 14px;
+  width: 110px;
+  float: right;
+}
+.everyone-btn a{
+  list-style: none;
+  text-decoration: none;
+  color:#1d9bf0 ;
+  font-weight: 700;
+}
+.everyone-btn:hover{
+  background-color: #6eb8ea3e;
+}
+
+.tweet-btn-line {
+  display: grid;
+  grid-auto-flow: column;
+  border-bottom:thin solid rgba(220, 220, 220, 0.439) ;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+.tweet-btn-line-list button{
+  border: none;
+  background-color: transparent;
+}
+.tweet-btn-line-list button:hover {
+  border-radius: 30px;
+  border:thin solid #1d9cf03b;
+}
+.submit-tweet-btn {
+  border: none;
+  background-color:#1d9cf09b;
+  border-radius: 30px;
+  width: 100px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  float:inline-end;
+}
+.submit-tweet-btn:hover {
+  background-color:#1d9bf0 ;
 }
