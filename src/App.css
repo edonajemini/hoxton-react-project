@@ -7,7 +7,7 @@
     370px 600px auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+/* NAVBAR*/
 .nav-bar {
   grid-area: nav-bar;
   position: fixed;
@@ -107,11 +107,141 @@
 .tweet-btn:hover {
   background-color:#177bbdec;
 }
+/* NAVBAR - ENDS*/
+
+
+/* SIDEBAR */
 .side-bar{
   grid-area: side-bar;
-  background-color: pink;
   padding-right: 20px;
 }
+
+#side-bar-search {
+  margin: 5px;
+  width: 330px;
+  height: 50px;
+  background-color: rgba(220, 220, 220, 0.351);
+  border-radius: 30px;
+  padding-left:20px ;
+  font-size: 14px;
+  border: none;
+}
+#side-bar-search::placeholder {
+  color: gray;
+  font-weight: 500;
+}
+#side-bar-search:focus{
+  outline: none;
+  border: thin solid #1d9bf0;
+  box-shadow: 0px 0px 2px 0px #1d9cf05c;
+  background-color: transparent;
+}
+.trends-for-you{
+  border-radius: 25px;
+  background-color: rgba(220, 220, 220, 0.161);
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 110px;
+  padding: 10px;
+}
+.trends-for-you h2{
+  margin-left: 25px;
+}
+.trends-for-you h3{
+  margin-left: 10px;
+}
+.trends-for-you a{
+  color: #1d9bf0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.trends-for-you p{
+  color: gray;
+  margin: 10px;
+}
+
+.trends-for-you ul{
+  list-style: none;
+}
+.trendings:hover{
+  background-color: rgba(220, 220, 220, 0.306);
+  border-radius: 10px;
+}
+.who-to-follow {
+  border-radius: 25px;
+  background-color: rgba(220, 220, 220, 0.161);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 110px;
+  padding: 10px;
+}
+.who-to-follow h2{
+  margin-left: 20px;
+}
+.who-to-follow a{
+  color: #1d9bf0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.who-to-follow p{
+  color: gray;
+}
+.who-to-follow ul{
+  list-style: none;
+}
+.who-to-follow li:hover{
+  background-color: rgba(220, 220, 220, 0.306);
+  border-radius: 10px;
+}
+.people-to-follow{
+  display: grid;
+  grid-auto-flow: column;
+}
+.people-to-follow img{
+  border-radius: 60px;
+  margin-right: 15px;
+  margin-top:15px;
+  margin-left: 10px;
+}
+.people-to-follow button{
+  border: none;
+  background-color:#1d1d1d;
+  border-radius: 30px;
+  width: 80px;
+  height: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+.names{
+  float: inline-start;
+  width: 200px;
+}
+.term{
+  display: inline;
+}
+
+.term:hover {
+  text-decoration: underline;
+}
+.terms a{
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+}
+.terms ul{
+  list-style: none;
+  font-size: 13px;
+  margin-right:50px ;
+}
+
+/* SIDEBAR - ENDS */
+
+
+/* MAIN */
 main {
   grid-area: main;
   display: grid;
@@ -126,6 +256,7 @@ main {
   grid-auto-flow: column;
   position: fixed;
   width: auto;
+  background-color: rgba(255, 255, 255, 0.943);
   gap:500px;
 }
 .header img {
@@ -150,16 +281,16 @@ main {
 .input-tweet {
   margin-left: 60px;
 }
-input{
+.input-tweets{
   width: 400px;
   height: 40px;
   border: none;
   font-size: 22px;
 }
-input::placeholder {
+.input-tweets::placeholder {
   color: rgb(91, 89, 89);
 }
-input:focus{
+.input-tweets:focus{
   outline: none;
 }
 
@@ -211,3 +342,4 @@ input:focus{
 .submit-tweet-btn:hover {
   background-color:#1d9bf0 ;
 }
+/* MAIN - ENDS*/

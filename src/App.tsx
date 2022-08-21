@@ -5,9 +5,12 @@ import Third from '../public/images/Third.png';
 import Fourth from '../public/images/Fourth.png';
 import Fifth from '../public/images/Fifth.png';
 import Sixth from '../public/images/Sixth.png';
+import Comment from '../public/images/Comment.png';
+import Retweet from '../public/images/Retweet.png';
+import Like from '../public/images/Like.png';
+import Sharee from '../public/images/Sharee.png';
 import './App.css'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -33,21 +36,21 @@ function App() {
           </button>
         </div>
       <div className='side-bar'>
-      <input type="search" placeholder="🔎" ></input>
+         <input id='side-bar-search' type="search" placeholder= "Search Twitter" ></input>
         <div className='trends-for-you'>
           <h2>Trends for you</h2>
           <ul>
-            <li>
+            <li className='trendings'>
               <p>Trending in Kosovo</p>
               <h3>Kosovo </h3>
               <p>4,855 Tweets</p>
             </li>
-            <li>
+            <li className='trendings'>
               <p>Trending in Kosovo</p>
               <h3>Albania </h3>
               <p>2,822 Tweets</p>
             </li>
-            <li>
+            <li className='trendings'>
               <p>Casemiro Trending</p>
               <h3>Casemiro </h3>
               <p>1.05M Tweets</p>
@@ -57,33 +60,42 @@ function App() {
         </div>
         <div className='who-to-follow'>
           <ul>
-            <li>
+            <li className='people-to-follow'>
+              <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Fabrizio_Romano_2021_%28cropped%29.jpg/640px-Fabrizio_Romano_2021_%28cropped%29.jpg' width='50px'/>
+              <div className='names'>
               <h3>Fabrizio Romano</h3>
-              <p>@Fabrizio Romano</p>
+              <p>@FabrizioRomano</p>
+              </div>
               <button>Follow</button>
             </li>
-            <li>
+            <li className='people-to-follow'>
+            <img src='https://i.pinimg.com/736x/e2/15/17/e215173b90c18d9f02288e8955fa9e85.jpg' width='50px'/>
+            <div className='names'>
               <h3>Cardi B</h3>
-              <p>@Cardi B</p>
+              <p>@CardiB</p>
+              </div>
               <button>Follow</button>
             </li>
-            <li>
+            <li className='people-to-follow'>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyFSHvtgLMXYwoYRBHHZ0jy3xuTO6-rnxFMA&usqp=CAU' width='50px'/>
+            <div className='names'>
               <h3>Elon Musk</h3>
-              <p>@Elon Musk</p>
+              <p>@ElonMusk</p>
+              </div>
               <button>Follow</button>
             </li>
           </ul>
           <a href='#'>Show more</a>
         </div>
-        <div className='Terms'>
+        <div className='terms'>
           <p>
             <ul>
-              <li> <a href="#" >erms of Service </a> </li>
-              <li> <a href="#" >Privacy Policy </a> </li>
-              <li> <a href="#" > Cookie Policy </a> </li>
-              <li> <a href="#" > Accessibility </a> </li>
-              <li> <a href="#" > Ads info </a> </li>
-              <li> <a href="#" > More </a> </li>
+              <li className='term'> <a href="#" >Terms of Service </a> </li>
+              <li className='term'> <a href="#" >Privacy Policy </a> </li>
+              <li className='term'> <a href="#" > Cookie Policy </a> </li>
+              <li className='term'> <a href="#" > Accessibility </a> </li>
+              <li className='term'> <a href="#" > Ads info </a> </li>
+              <li className='term'> <a href="#" > More... </a> </li>
               <li> <a href="#" > © 2022 Twitter, Inc. </a> </li>
 </ul></p>
         </div>
@@ -91,7 +103,7 @@ function App() {
       <main>
         <div className='header'>
       <h3>Home</h3> 
-      <img src='https://cdn-icons-png.flaticon.com/512/685/685173.png' alt='logo-stars' width="20px"/>
+      <img src='https://cdn-icons-png.flaticon.com/512/685/685173.png' alt='logo-stars' width="10px"/>
         </div>
         <div className='main-part'>
           <div className='box-picture'>
@@ -102,7 +114,7 @@ function App() {
           </div>
       <form>
         <div className='input-tweet'>
-        <input type="text" placeholder="What's happening?"></input>
+        <input className='input-tweets' type="text" placeholder="What's happening?"></input>
         </div>
         <div className='tweet-btn-line'>
           <div className='tweet-btn-line-list'>
@@ -116,6 +128,20 @@ function App() {
         <button className='submit-tweet-btn' type="submit" >Tweet</button>
         </div>
       </form>
+      <div className='tweets'>
+        <img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecddb36f-5eb5-4270-8640-c1e0a73c3f2b/d9mot04-4560f2ec-0f4e-4fe8-8b7a-b045b10d0d4c.png/v1/fill/w_1024,h_975,q_80,strp/random_profile_picture_by_skybonthebunny_d9mot04-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTc1IiwicGF0aCI6IlwvZlwvZWNkZGIzNmYtNWViNS00MjcwLTg2NDAtYzFlMGE3M2MzZjJiXC9kOW1vdDA0LTQ1NjBmMmVjLTBmNGUtNGZlOC04YjdhLWIwNDViMTBkMGQ0Yy5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.a5A2JbbWe3JA-r-J4KfxIcmj2wpql2BCLHVLIE9OQtQ'  width="50px"/>
+        <h3>Simon Simons</h3>
+        <p>@SimonSimons</p>
+        <p>1 hour ago</p>
+        <h4>What a lovely evening ❤️</h4>
+        <img src='https://images.pexels.com/photos/771883/pexels-photo-771883.jpeg?cs=srgb&dl=pexels-reynaldo-brigworkz-brigantty-771883.jpg&fm=jpg'  width="400px"/>
+        <div className='tweet-reactions'>
+        <img src={Comment}  width="40px"/>
+        <img src={Retweet}  width="40px"/>
+        <img src={Like}  width="40px"/>
+        <img src={Sharee}  width="40px"/>
+        </div>
+      </div>
       </div>
       </main>
     </div>
