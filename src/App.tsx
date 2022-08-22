@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import React from "react"
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import {NavBar} from '../components/NavBar';
 import {SideBar} from '../components/SideBar';
 import {MainHeader} from '../components/MainHeader';
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+
         < NavBar />
         < SideBar/>
       <main>

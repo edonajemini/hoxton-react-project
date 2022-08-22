@@ -23,5 +23,6 @@ export function NavBar() {
           </div>
           </button>
         </div>
+
     )
 }
