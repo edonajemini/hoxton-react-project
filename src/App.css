@@ -63,11 +63,12 @@
 }
 
 .loged-in-btn {
+  display: grid;
+  grid-auto-flow: column;
   margin-top: 50px;
   width:220px;
   height: 70px;
   margin-left: 15px;
-  margin-top: 50px;
   border: none;
   border-radius: 50px;
   background-color: transparent;
@@ -83,13 +84,13 @@
 }
 .loged-in-btn img{
   margin-top: 20px;
-  float: inline-start;
+  margin-left: 10px;
   border-radius: 30px;
-  margin-right: 10px;
 }
 .loged-in{
   display:table-row;
-  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 
 .tweet-btn {
@@ -114,6 +115,11 @@
 .side-bar{
   grid-area: side-bar;
   padding-right: 20px;
+  position: fixed;
+  right:0;
+  width: 400px;
+  border-left:thin solid rgba(220, 220, 220, 0.439) ;
+  padding-left: 10px;
 }
 
 #side-bar-search {
@@ -143,6 +149,7 @@
   margin-top: 10px;
   margin-right: 110px;
   padding: 10px;
+  width: 360px;
 }
 .trends-for-you h2{
   margin-left: 25px;
@@ -175,6 +182,7 @@
   margin-top: 10px;
   margin-right: 110px;
   padding: 10px;
+  width: 360px;
 }
 .who-to-follow h2{
   margin-left: 20px;
@@ -215,11 +223,11 @@
   font-size: 14px;
   font-weight: 600;
   margin-top: 25px;
-  margin-right: 10px;
+  margin-right: 70px;
 }
 .names{
   float: inline-start;
-  width: 200px;
+  width: 150px;
 }
 .term{
   display: inline;
@@ -341,5 +349,55 @@ main {
 }
 .submit-tweet-btn:hover {
   background-color:#1d9bf0 ;
+}
+.tweets{
+  border-bottom:thin solid rgba(220, 220, 220, 0.439) ;
+}
+.post-person{
+  display:grid;
+  grid-auto-flow: column;
+  margin-right: 310px;
+  margin-top: 20px;
+}
+.post-person img{
+  margin-top: 20px;
+}
+.message {
+  margin-left: 55px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+.tag-hour{
+  margin-top: 10px;
+  display:grid;
+  grid-auto-flow: column;
+  gap: 15px;
+  color: rgb(94, 94, 94);
+  font-size: 13px;
+}
+#tweet-post-profile-pic{
+  border-radius: 30px;
+  margin-left: 5px;
+}
+.the-tweet {
+  padding-left: 55px;
+}
+
+
+#tweet-image{
+  border-radius: 20px;
+}
+.tweet-reactions{
+  display: grid;
+  grid-auto-flow: column;
+}
+.tweet-reactions button{
+  border:none;
+  background-color: transparent;
+  width: 60px;
+}
+.tweet-reactions button:hover {
+  border-radius: 30px;
+  border:thin solid #1d9cf03b;
 }
 /* MAIN - ENDS*/
