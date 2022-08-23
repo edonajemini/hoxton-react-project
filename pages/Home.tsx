@@ -10,8 +10,9 @@ export function Home() {
   return (
     <div className="App">
       <main>
-      < MainPart />
-      < SideBar/>
+        <MainHeader/>
+        <MainPart />
+        <SideBar/>
       </main>
     </div>
   )

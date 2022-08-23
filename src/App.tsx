@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="App">
       < NavBar />
-      
       <Routes>
   <Route index element={<Navigate to="/home" />} />
   <Route path="home" element= {<Home />} />
@@ -29,7 +28,6 @@ function App() {
   <Route path="profile" element={<Profile />} />
   </Routes>
       <main>
-       < MainHeader />
       </main>
     </div>
   )

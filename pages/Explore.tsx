@@ -1,12 +1,12 @@
 import React from "react";
 import {ExploreSideBar } from '../components/ExploreSideBar'
-import { TrendsForYou } from "../components/TrendsForYou";
+import { AnotherMainSearch } from "../components/AnotherMainSearch";
 
 export function Explore(){
     return(
         <div>
-            < TrendsForYou />
             <ExploreSideBar />
+            <AnotherMainSearch />
         </div>
     )
 }
