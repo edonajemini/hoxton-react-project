@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom"
+import { load } from 'react-require';
 export function NavBar() {
     return(
             <div className='nav-bar'>
