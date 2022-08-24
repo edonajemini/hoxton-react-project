@@ -516,7 +516,6 @@ main {
   height: auto;
   font-size: 14px;
   width: 110px;
-  float: right;
 }
 .everyone-btn a{
   list-style: none;
@@ -527,6 +526,7 @@ main {
 .everyone-btn:hover{
   background-color: #6eb8ea3e;
 }
+
 
 .tweet-btn-line {
   display: grid;
@@ -606,4 +606,62 @@ main {
   border-radius: 30px;
   border:thin solid #1d9cf03b;
 }
+
+nav .links:focus,
+.subnav:active .sub-btn {
+    border: thin solid rgb(222, 222, 222);
+    padding: 10px 20px;
+   color: rgb(139, 139, 139);
+   padding: 2px 5px;
+   font-weight: bolder;
+   margin-right: 5px;
+   display: grid;
+        grid-auto-flow: row;
+}
+
+
 /* MAIN - ENDS*/
+
+/* Messages  */
+.messages-page{
+  margin-left: 400px;
+  width: 400px;
+  border-right:thin solid rgba(220, 220, 220, 0.439) ;
+}
+.header-messages{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 200px;
+}
+.text-message p{
+  color: gray;
+  font-weight: 300;
+}
+.message-header-images{
+  margin-top: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+}
+.message-header-images img:hover{
+  border-radius: 30px;
+  border:thin solid gainsboro ;
+}
+.message-btn{
+  width:220px;
+  height: 50px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #1d9bf0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.message-btn:hover{
+  background-color: #1d9cf0e6;
+}
+.write-mesasages{
+  margin-left: 900px;
+}
