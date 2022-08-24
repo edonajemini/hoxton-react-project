@@ -2,17 +2,17 @@ import Retweet from '../public/images/Retweet.png';
 import Like from '../public/images/Like.png';
 import Sharee from '../public/images/Sharee.png';
 import Comment from '../public/images/Comment.png';
-import { useState, useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+
 type Tweets = {
-      id: number,
-      user:string,
-      image: string,
-      gif: string,
-      title: string,
-      text: string,
-      emoji:string
+  id: number,
+  user:string,
+  image: string,
+  gif: string,
+  text: string,
+  emoji:string
 }
+
 export function Tweets(){
   const [tweets, setTweets] = useState<Tweets[]>([])
   useEffect(() => {

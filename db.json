@@ -86,23 +86,16 @@
       "user":"Edona Jemini",
       "image": "https://www.forevernew.co.in/media/catalog/product/cache/0f1e57fb43dd9eae693800499a6afb18/o/l/oldimlall_onbody_27402501_f_0nks86zlffdvdqvn.jpg",
       "gif":"https://i.pinimg.com/originals/fd/3c/cd/fd3ccd7b49e366b4206f5ac7f8fa8dac.gif",
-      "title": "bllablla",
       "text": "Lorem ..handmadenmbjkb jeansbv hh",
       "emoji":"😍"
     }
   ],
-  "user": [
+  "users": [
     {
       "name": "Edona Jemini",
       "username": "@EdonaJemini",
-      "profilepicture": "https://cutewallpaper.org/22/girl-aesthetic-profile-wallpapers/80631313.jpg",
+      "profilepicture": "https://avatars.githubusercontent.com/u/74864689?v=4",
       "id": 1
-    },
-    {
-      "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
-      "price": "100",
-      "inCart": 0,
-      "id": 5
     }
   ]
 }
