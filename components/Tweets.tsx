@@ -19,6 +19,8 @@ type Tweets = {
   emoji:string
 }
 
+
+
 export function Tweets(){
   const [tweets, setTweets] = useState([
     {
@@ -48,22 +50,30 @@ export function Tweets(){
     }
   ])
 
+  const [displayed, setDisplayed] = useState(false)
+  const isdisplayed = ()=>{
+    setDisplayed(true)
+  }
+  const isnotdisplayed = ()=>{
+    setDisplayed(false)
+  }
+
     return(
         <div className='tweets'>
            <div className='about-container-right' >
            <form onSubmit={event => {
               event.preventDefault()
 
-              let answer = {
+              let newtweet = {
                 text: event.target.text.value,
                 image: event.target.image.value
               }
               event.target.reset();
               
-              setTweets([...tweets, answer])
+              setTweets([...tweets, newtweet])
             }}>
         <div className='input-tweet'>
-        <input className='input-tweets' name="text" type="text" placeholder="What's happening?" required></input>
+        <input className='input-tweets' name="text" type="text" placeholder="What's happening?" ></input>
         </div>
         <div className='tweet-btn-line'>
           <div className='tweet-btn-line-list'>
@@ -76,7 +86,7 @@ export function Tweets(){
         </div>
         <button className='submit-tweet-btn' type="submit" >Tweet</button>
         </div>
-        <input type="url" name='image' className='message-mail' placeholder='Image' required />
+        <input type="url" name='image' className='message-mail' placeholder='Image' />
       </form>
           </div> 
           {

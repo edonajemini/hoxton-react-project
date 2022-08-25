@@ -17,28 +17,36 @@ export function Messages(){
                 <p>
                 Drop a line, share Tweets and more with private conversations between you and others on Twitter.
                 </p>
-                <button className="message-btn"  >Write a message</button>
-            </div>
-        </div>
-        <div className="write-mesasages">
-        <form onSubmit={event => {
+              
+                <form onSubmit={event => {
               event.preventDefault()
 
               let answer = {
                 messages: event.target.text.value,
-                email: event.target.email.value
+                name: event.target.name.value
               }
               event.target.reset();
               
               setMessages([...messages, answer])
             }}>
-              <input type="email" name='email' className='message-mail' placeholder='Please enter the email u want to send this message to!' required />
-              <textarea name="text" id="costumer-message" rows={5} placeholder="Leave your message here!" required>
+              <input type="name" name='name' className='message-mail' placeholder='Who do u want to send this message to' required />
+              <textarea name="text" id="costumer-message" rows={1} placeholder="" required>
               </textarea>
-              <button className='message-submit-btn'>
-                Submit
-              </button>
+              <button className="message-btn"  >Write a message</button>
             </form>
+            </div>
+        </div>
+        <div className="write-mesasages">
+        
+            <ul>
+              {messages.map(item => (
+                <li className='message-li'>
+                  <h4>Sent to {item.name}</h4>
+                  <p>{item.messages}</p>
+                </li>
+              ))}
+            </ul>
+            
         </div>
         </div>
     )
