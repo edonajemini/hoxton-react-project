@@ -13,25 +13,20 @@ type Users = {
 }
 
 export function MainPart(){
-  const [users, setUsers] = useState<Users[]>([])
-  useEffect(() => {
-    fetch("http://localhost:5000/users")
-      .then((resp) => resp.json())
-      .then((usersFromServer) => setUsers(usersFromServer));
-  }, []);
+ 
 
     return(
         <div className='main-part'>
-          {users.map(user=>(
             <div className='box-picture'>
-            <img src={user.profilepicture} alt='profile-pic' width="50px"/>
+            <img src='https://avatars.githubusercontent.com/u/74864689?v=4' alt='profile-pic' width="50px"/>
             <button className='everyone-btn'>
             <a href='#' >Everyone ▼ </a>
             </button>
+           
             </div>
-          ))}
-          
-      < Form />
+
+            
+      < Form  />
       < Tweets />
       </div>
     )

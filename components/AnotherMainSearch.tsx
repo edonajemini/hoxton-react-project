@@ -1,6 +1,3 @@
-import React from "react";
-import { SearchBar } from "./SearchBar";
-import { TrendsForYou } from "./TrendsForYou";
 
 export function AnotherMainSearch(){
     return(
