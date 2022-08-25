@@ -1,16 +1,13 @@
 {
   "tweets": [
     {
-      "id": 3,
-      "user": "Hldona",
-      "image": "https://www.forevernew.co.in/media/catalog/product/cache/0f1e57fb43dd9eae693800499a6afb18/o/l/oldimlall_onbody_27402501_f_0nks86zlffdvdqvn.jpg",
-      "text": "Lorem ..handmadenmbjkb jeansbv hh"
+      "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
+      "id": 3
     },
     {
-      "id": 4,
-      "user": "Hldona",
-      "image": "https://www.forevernew.co.in/media/catalog/product/cache/0f1e57fb43dd9eae693800499a6afb18/o/l/oldimlall_onbody_27402501_f_0nks86zlffdvdqvn.jpg",
-      "text": "Lorem ..handmadenmbjkb jeansbv hh"
+      "image": "",
+      "text": "ghjk",
+      "id": 4
     }
   ],
   "user": [

@@ -14,15 +14,11 @@ type Tweets = {
   id: number,
   user:string,
   image: string,
-  gif: string,
-  text: string,
-  emoji:string
+  text: string
 }
 
-
-
 export function Tweets(){
-  const [tweets, setTweets] = useState([])
+  const [tweets, setTweets] = useState<Tweets[]>([])
   useEffect(() => {
     fetch("http://localhost:4000/tweets")
       .then((resp) => resp.json())
@@ -46,20 +42,21 @@ export function Tweets(){
     return(
         <div className='tweets'>
            <div className='about-container-right' >
-           <form onSubmit={event => {
-              event.preventDefault()
+           <form onSubmit={event => 
+           {event.preventDefault()
+            const tweetscopy = structuredClone(tweets)
               
-
               let newtweet = {
                 text: event.target.text.value,
                 image: event.target.image.value
               }
+              tweetscopy.push(newtweet);
+              setTweets(tweetscopy)
+
               event.target.reset();
-              
-              setTweets([...tweets, newtweet])
             }}>
         <div className='input-tweet'>
-        <input className='input-tweets' name="text" type="text" placeholder="What's happening?" ></input>
+        <input className='input-tweets' id='text' name="text" type="text" placeholder="What's happening?" ></input>
         </div>
         <div className='tweet-btn-line'>
           <div className='tweet-btn-line-list'>
@@ -70,9 +67,22 @@ export function Tweets(){
         <button> <img src={Fifth} alt="" width="30px"/></button>
         <button> <img src={Sixth} alt="" width="30px"/></button>
         </div>
-        <button className='submit-tweet-btn' type="submit" >Tweet</button>
+        <button className='submit-tweet-btn' onClick={(event)=>{
+    fetch("http://localhost:4000/tweets",{
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        image: document.getElementById("image")?.value,
+        text: document.getElementById("text")?.value
+      }
+      )
+    }) .then(resp => resp.json())
+    .then(tweetsfromserver => setTweets([...tweets, tweetsfromserver]))
+  }}>Tweet</button>
         </div>
-        <input type="url" name='image' className='message-mail' placeholder='Image' />
+        <input type="url" name='image' id='image' className='message-mail' placeholder='Image' />
       </form>
           </div> 
           {
