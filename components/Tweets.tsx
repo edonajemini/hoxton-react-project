@@ -75,7 +75,7 @@ export function Tweets(){
       },
       body: JSON.stringify({
         image: document.getElementById("image")?.value,
-        text: document.getElementById("text")?.value
+        text: document.getElementById("text")?.value,
       }
       )
     }) .then(resp => resp.json())
@@ -123,6 +123,7 @@ export function Tweets(){
               </>
             ))
           }
+          
           
     
       </div>

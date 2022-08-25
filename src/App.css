@@ -64,6 +64,10 @@
   display: grid;
   padding: 12px 20px;
 }
+.nav-bar-list-btn .active {
+  font-size: 24px;
+  font-weight: 500;
+}
 .nav-bar-list-btn:hover {
   background-color: rgba(220, 220, 220, 0.728);
   border-radius: 25px;
@@ -636,6 +640,7 @@ nav .links:focus,
 .text-message p{
   color: gray;
   font-weight: 300;
+  font-size: 10px;
 }
 .message-header-images{
   margin-top: 20px;
