@@ -24,7 +24,7 @@ type CommentData = {
 export function Home() {
   const [tweets, serTweets] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/tweets")
+    fetch("http://localhost:4000/tweets")
       .then((resp) => resp.json())
       .then((tweetsFromServer) => serTweets(tweetsFromServer));
   }, []);

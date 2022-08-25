@@ -3,6 +3,7 @@ import React from "react";
 export function TrendsForYou(){
     return(
         <div className='trends-for-you'>
+          
           <h2>Trends for you</h2>
           <ul>
             <li className='trendings'>
