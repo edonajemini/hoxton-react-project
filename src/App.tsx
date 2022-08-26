@@ -11,6 +11,7 @@ import {Messages} from "../pages/Messages";
 import {Bookmarks} from "../pages/Bookmarks";
 import {Lists} from "../pages/Lists";
 import {Profile} from "../pages/Profile";
+import {Notfound} from "../pages/Notfound";
 import './App.css'
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
   <Route path="bookmarks" element={<Bookmarks />} />
   <Route path="lists" element={<Lists />} />
   <Route path="profile" element={<Profile />} />
+  <Route path="*" element={<Notfound />} />
   </Routes>
       <main>
       </main>

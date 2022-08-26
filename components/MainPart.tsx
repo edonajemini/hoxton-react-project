@@ -22,6 +22,7 @@ export function MainPart(){
     }
   ])
     return(
+      
         <div className='main-part'>
           {user.map(person=>(
             <div className='box-picture'>
@@ -32,8 +33,6 @@ export function MainPart(){
            
             </div>
           ))}
-            
-
       < Tweets />
       </div>
     )
