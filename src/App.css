@@ -577,6 +577,31 @@ main {
   font-weight: 400;
   color: #313131;
 }
+.write-messages{
+  display: grid;
+  width: 300px;
+}
+.write-messages input{
+  height: 20px;
+}
+.write-messages input.active{
+  overflow:scroll;
+}
+.message-li{
+  width: 300px;
+  height: 200px;
+  list-style: none;
+  padding: 15px;
+  background-color:rgba(128, 128, 128, 0.049);
+  border-radius: 10px;
+  margin: 10px;
+}
+.message-li h5{
+  padding: 5px;
+  background-color:#1d9bf0;
+  color: white;
+  border-radius: 10px;
+}
 .tag-hour{
   margin-top: 10px;
   display:grid;

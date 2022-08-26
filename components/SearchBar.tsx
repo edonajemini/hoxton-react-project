@@ -3,7 +3,6 @@ import SelectSearch from 'react-select-search';
 
 export function SearchBar(){
     const options = [
-        {name: 'Swedish', value: 'sv'},
         {name: 'English', value: 'en'},
         {name:'Albanian', value: 'al'}
     ];

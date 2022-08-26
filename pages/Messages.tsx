@@ -29,9 +29,11 @@ export function Messages(){
               
               setMessages([...messages, answer])
             }}>
+              <div className="write-messages">
               <input type="name" name='name' className='message-mail' placeholder='Who do u want to send this message to' required />
-              <textarea name="text" id="costumer-message" rows={1} placeholder="" required>
+              <textarea name="text" id="costumer-message" rows={3} placeholder="" required>
               </textarea>
+              </div>
               <button className="message-btn"  >Write a message</button>
             </form>
             </div>
@@ -41,8 +43,8 @@ export function Messages(){
             <ul>
               {messages.map(item => (
                 <li className='message-li'>
-                  <h4>Sent to {item.name}</h4>
-                  <p>{item.messages}</p>
+                  <p>Sent to {item.name}</p>
+                  <h5>{item.messages}</h5>
                 </li>
               ))}
             </ul>
